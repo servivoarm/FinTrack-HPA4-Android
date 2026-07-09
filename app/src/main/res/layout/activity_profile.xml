@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_background">
+
+    <ImageButton
+        android:id="@+id/btnVolver"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/go_back"
+        android:src="@drawable/ic_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/brown_primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVolver">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="40dp">
+
+            <!-- Circular Avatar with Border -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/brown_primary"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:id="@+id/ivUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/profile_picture"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_person_24" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Large centered name -->
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:textColor="@color/brown_primary"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- Row of two square cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnCambiarFoto"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/tan_secondary"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:contentDescription="@string/change_photo"
+                            android:src="@drawable/ic_edit_24"
+                            app:tint="@color/cream_background" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/change_photo"
+                            android:textColor="@color/cream_background"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/tan_light"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMonedaActual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/brown_primary"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/preferred_currency"
+                            android:textColor="@color/brown_primary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Info lines -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/divider_light" />
+
+            <TextView
+                android:id="@+id/tvCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:textColor="@color/text_secondary_gray"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/divider_light" />
+
+            <!-- Action Controls -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/settings"
+                android:textColor="@color/brown_primary"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerMoneda"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:backgroundTint="@color/tan_light"
+                android:paddingHorizontal="16dp" />
+
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_button_pill"
+                android:text="@string/sign_out"
+                android:textAllCaps="false"
+                android:textColor="@color/cream_background"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/btnEliminarCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:padding="8dp"
+                android:text="@string/delete_account"
+                android:textColor="@color/expense_red"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_surface">
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/app_name"
+        android:textColor="@color/brown_primary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account"
+                android:textColor="@color/brown_primary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etConfirmarPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <Button
+                android:id="@+id/btnCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_button_pill"
+                android:text="@string/create_account"
+                android:textAllCaps="false"
+                android:textColor="@color/cream_background"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/btnVolverLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:padding="8dp"
+                android:text="@string/already_have_account"
+                android:textColor="@color/text_secondary_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

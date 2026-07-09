@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FinTrack" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Force Brew & Browse theme even in dark mode -->
+        <item name="colorPrimary">@color/brown_primary</item>
+        <item name="colorSecondary">@color/tan_secondary</item>
+        <item name="android:windowBackground">@color/cream_background</item>
+        <item name="android:statusBarColor">@color/cream_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Colors based on palette -->
+        <item name="colorSurface">@color/white_surface</item>
+        <item name="colorOnSurface">@color/brown_primary</item>
+        <item name="colorSurfaceVariant">@color/cream_card</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary_gray</item>
+
+        <item name="colorOnPrimary">@color/cream_background</item>
+        <item name="colorOutline">@color/divider_light</item>
+    </style>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_surface">
+
+    <TextView
+        android:id="@+id/tvTituloObjetivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/new_goal"
+        android:textColor="@color/brown_primary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloObjetivo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="96dp">
+
+            <EditText
+                android:id="@+id/etNombreObjetivo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/goal_name"
+                android:inputType="textCapSentences"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etDescripcionObjetivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/description_optional"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:padding="16dp"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etMontoMeta"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/target_amount"
+                android:inputType="numberDecimal"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/contribution_frequency"
+                android:textColor="@color/brown_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerFrecuenciaAporte"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:backgroundTint="@color/tan_light"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/etAporteSugerido"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/suggested_contribution"
+                android:inputType="numberDecimal"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <Button
+                android:id="@+id/btnGuardarObjetivo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_button_pill"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/cream_background"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/btnCancelarObjetivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:padding="8dp"
+                android:text="@string/cancel"
+                android:textColor="@color/text_secondary_gray" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

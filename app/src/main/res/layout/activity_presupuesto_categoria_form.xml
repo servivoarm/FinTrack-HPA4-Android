@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_surface">
+
+    <TextView
+        android:id="@+id/tvTituloPresupuestoCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/brown_primary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloPresupuestoCategoria">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="96dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textColor="@color/brown_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerCategoriaPresupuesto"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:backgroundTint="@color/tan_light"
+                android:paddingHorizontal="16dp" />
+
+            <EditText
+                android:id="@+id/etMontoLimite"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/budget_limit"
+                android:inputType="numberDecimal"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etMes"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/month_number"
+                android:inputType="number"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <EditText
+                android:id="@+id/etAnio"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:hint="@string/year_number"
+                android:inputType="number"
+                android:textColor="@color/brown_primary"
+                android:textColorHint="@color/text_secondary_gray" />
+
+            <Button
+                android:id="@+id/btnGuardarPresupuesto"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_button_pill"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/cream_background"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+            <TextView
+                android:id="@+id/btnCancelarPresupuesto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:padding="8dp"
+                android:text="@string/cancel"
+                android:textColor="@color/text_secondary_gray" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

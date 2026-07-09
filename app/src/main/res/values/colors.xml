@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Palette "Brew & Browse" -->
+    <color name="cream_background">#F3E4CE</color>
+    <color name="cream_card">#FBF3E6</color>
+    <color name="brown_primary">#4A3728</color>
+    <color name="brown_dark">#3A2A1E</color>
+    <color name="tan_secondary">#C9A876</color>
+    <color name="tan_light">#E4CBA0</color>
+    <color name="white_surface">#FFFFFF</color>
+    <color name="text_secondary_gray">#9C9187</color>
+    <color name="divider_light">#EDE2D0</color>
+
+    <!-- Mapped Semantic Colors (to avoid breaking code) -->
+    <color name="purple_primary">@color/brown_primary</color>
+    <color name="purple_light">@color/tan_secondary</color>
+    <color name="purple_dark">@color/brown_dark</color>
+    <color name="background_light">@color/white_surface</color>
+    <color name="text_primary">@color/brown_primary</color>
+    <color name="text_secondary">@color/text_secondary_gray</color>
+    <color name="text_hint">@color/text_secondary_gray</color>
+
+    <color name="income_green">#6E8B3D</color> <!-- Adjusted green to be more "natural" -->
+    <color name="expense_red">#A0522D</color> <!-- Adjusted red to be more brownish -->
+    <color name="savings_blue">#C9A876</color>
+
+    <color name="card_background">@color/cream_card</color>
+    <color name="divider_color">@color/divider_light</color>
+</resources>
